@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* Setting for Sample Verification */
+.wrapper {
+  padding: 0 0 800px 0;
+}
+.wrapper > h1 {
+  font-size: 20px;
+}
+/** 
+ * Init: common styles
+ * [TODO] 別ファイルで共通化する
+ */
+.ad {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.ad a {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+/**
+ * Each Style styles needed this AD pattern
+ */
+/*
+.animateEnd
+	background #f00
+	-webkit-animation spin 500ms ease 1
+
+@-webkit-keyframes spin
+	0%
+		-webkit-transform rotate(0deg)
+	
+	100%
+		-webkit-transform rotate(360deg)
+*/
