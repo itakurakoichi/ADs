@@ -48,7 +48,13 @@ gulp.task('js', function() {
 		.pipe(plumber())
 		// 本番配布時は、圧縮後に配布
 		// .pipe(uglify())
-		// .pipe(gulp.dest('./dist/'));
+		.pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('default', ['html', 'css', 'js']);
+gulp.task('watch', function() {
+	gulp.watch('./src/**/*.jade', ['html']);
+	gulp.watch('./src/**/css/*.styl', ['css']);
+	gulp.watch('./src/**/js/*.js', ['js']);
+});
+
+gulp.task('default', ['html', 'css', 'js', 'watch']);
