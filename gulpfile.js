@@ -53,7 +53,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('webserver', function() {
-	gulp.src('./dist')
+	gulp.src('./src')
 		.pipe(
 			webserver({ livereload: true })
 		);
