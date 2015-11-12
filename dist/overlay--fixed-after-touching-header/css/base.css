@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* Setting for Sample Verification */
+.wrapper {
+  padding: 40px 0 1000px 0;
+}
+.gheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #0af;
+  color: #fff;
+  height: 50px;
+  box-shadow: 0 2px 4px #666;
+}
+.gheader > h1 {
+  font-size: 16px;
+}
+.ad {
+  width: 100%;
+}
+.ad a {
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: #000;
+}
+.ad:hover {
+  background: #f00;
+}
+/** 
+ * Init common styles
+ * [TODO] 別ファイルで共通化する
+ */
+/* do something */
+/**
+ * Each Style styles needed this AD pattern
+ */
+/* do something */

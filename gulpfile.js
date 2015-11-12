@@ -14,6 +14,7 @@
  */
 
 var gulp = require('gulp');
+var webserver = require('gulp-webserver');
 var plumber = require('gulp-plumber');
 
 var jade = require('gulp-jade');
@@ -28,7 +29,7 @@ gulp.task('html', function() {
 		// # 開発用配布
 		.pipe(gulp.dest('./src/'))
 		// # 本番配布
-		// .pipe(gulp.dest('./dist/'))
+		.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('css', function() {
@@ -36,10 +37,10 @@ gulp.task('css', function() {
 		.pipe(plumber())
 		.pipe(stylus())
 		// # 開発用配布
-		.pipe(gulp.dest('./src'));
+		.pipe(gulp.dest('./src'))
 		// # 本番配布: ミニファイし、本番配布
 		// .pipe(minifycss())
-		// .pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('js', function() {
@@ -47,7 +48,7 @@ gulp.task('js', function() {
 		.pipe(plumber())
 		// # 本番配布: 圧縮後に配布
 		// .pipe(uglify())
-		// .pipe(gulp.dest('./dist/'));
+		.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('watch', function() {
@@ -56,4 +57,11 @@ gulp.task('watch', function() {
 	gulp.watch('./src/**/js/*.js', ['js']);
 });
 
-gulp.task('default', ['html', 'css', 'js', 'watch']);
+gulp.task('webserver', function() {
+	gulp.src('./dist')
+		.pipe(
+			webserver({ livereload: true })
+		);
+});
+
+gulp.task('default', ['html', 'css', 'js', 'watch', 'webserver']);
