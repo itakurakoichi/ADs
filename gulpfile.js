@@ -19,16 +19,14 @@ var plumber = require('gulp-plumber');
 
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
-// var minifycss = require('gulp-minify-css');
-// var uglify = require('gulp-uglify');
+var minifycss = require('gulp-minify-css');
+var uglify = require('gulp-uglify');
 
 gulp.task('html', function() {
 	gulp.src('./src/**/*.jade')
 		.pipe(plumber())
 		.pipe(jade({ pretty: true }))
-		// # 開発用配布
 		.pipe(gulp.dest('./src/'))
-		// # 本番配布
 		.pipe(gulp.dest('./dist/'));
 });
 
@@ -36,18 +34,15 @@ gulp.task('css', function() {
 	gulp.src('./src/**/css/*.styl')
 		.pipe(plumber())
 		.pipe(stylus())
-		// # 開発用配布
 		.pipe(gulp.dest('./src'))
-		// # 本番配布: ミニファイし、本番配布
-		// .pipe(minifycss())
+		.pipe(minifycss())
 		.pipe(gulp.dest('./dist'));
 });
 
 gulp.task('js', function() {
 	gulp.src('./src/**/js/*.js')
 		.pipe(plumber())
-		// # 本番配布: 圧縮後に配布
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./dist/'));
 });
 
@@ -58,7 +53,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('webserver', function() {
-	gulp.src('./dist')
+	gulp.src('./src')
 		.pipe(
 			webserver({ livereload: true })
 		);
