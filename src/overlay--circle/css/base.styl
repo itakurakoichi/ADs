@@ -1,0 +1,97 @@
+@charset "utf-8"
+
+/* Setting for Sample Verification */
+
+*
+	margin 0
+	padding 0
+
+.wrapper
+	padding 50px 0 1000px 0
+
+.gheader
+	position fixed
+	top 0
+	left 0
+	width 100%
+	text-align center
+	background #0af
+	color #fff
+	padding 10px
+	box-shadow 0 2px 4px #666
+	> h1
+		font-size 16px
+
+.ad
+	width 100%
+
+	a
+		display block
+		text-decoration none
+		font-weight bold
+		color #fff
+		text-align center
+		background #000
+
+.entry-content
+	padding 10px
+
+/** 
+ * Init common styles
+ * [TODO] 別ファイルで共通化する
+ */
+/* Ver. fixed page bottom */
+.ad
+	position fixed
+	width 100%
+	text-align center
+
+	a
+		display block
+		text-decoration none
+		font-weight bold
+
+		&:hover
+			opacity .5
+/**
+ * Each Style styles needed this AD pattern
+ */
+
+figSize = 100px
+
+.ad
+	bottom 10px
+	right 10px
+	width figSize
+	height figSize
+
+	a
+		width figSize
+		height figSize
+		border-radius 50%
+		overflow hidden
+
+.anim
+	animation Bounce 4000ms ease-out infinite 0ms
+
+@keyframes Bounce
+	0%
+		bottom 10px
+	5%
+		bottom 10px
+	10%
+		bottom 25px
+	13%
+		bottom 10px
+	15%
+		bottom 20px
+	18%
+		bottom 10px
+	20%
+		bottom 15px
+	22%
+		bottom 10px
+	100%
+		bottom 10px
+
+	
