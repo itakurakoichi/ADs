@@ -1,0 +1,226 @@
+@charset "utf-8";
+/* Setting for Sample Verification */
+* {
+  padding: 0;
+  margin: 0;
+}
+img {
+  vertical-align: bottom;
+}
+.wrapper {
+  padding: 0 0 500px 0;
+}
+.gheader {
+  padding: 10px 0;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background: #0af;
+  color: #fff;
+  box-shadow: 0 2px 4px #666;
+}
+.gheader > h1 {
+  font-size: 16px;
+}
+.entry-content {
+  padding: 10px;
+}
+.ad {
+  width: 100%;
+  text-align: center;
+}
+.ad a {
+  display: inline-block;
+  margin: 0 auto;
+}
+.ad a:hover {
+  opacity: 0.5;
+}
+/** 
+ * Init common styles
+ * [TODO] 別ファイルで共通化する
+ */
+/* do something */
+/**
+ * Each Style styles needed this AD pattern
+ */
+/*
+ * @comment: .anim に対し、animationを設定
+ *             ⇛ パターン作成する 
+ * @定形:     animation AnimName duration effect
+	@keyframes AnimName
+		0%
+			prop value
+		n%
+			prop value
+		100%
+			prop value
+*/
+/**
+ * @animation:  3D Flip (Horizontal)
+ * @date        15.11.19
+ */
+/*
+.ad-wrap
+	perspective 10px
+*/
+/*
+.ad
+	transform rotateX(180deg)
+	&.anim
+		transform rotateX(0deg)
+		animation FlipHrizontal 500ms ease-in 1 0ms
+
+@keyframes FlipHrizontal
+	0%
+		transform rotateX(180deg)
+		
+	100%
+		transform rotateX(0deg)
+*/
+/**
+ * @animation:  Blur
+ * @date        15.11.18
+ */
+/*
+.ad
+	-webkit-filter blur(5px)
+
+	&.anim
+		-webkit-filter blur(0)
+		animation Blur 400ms ease-in 1 0ms
+
+@keyframes Blur
+	0%
+		-webkit-filter blur(5px)
+	100%
+		-webkit-filter blur(0)
+*/
+/**
+ * @animation:  Fade in and Scale
+ * @date        15.11.18
+ */
+/*
+.ad
+	opacity 0
+
+	&.anim
+		opacity 1
+		animation FadeinScale 400ms ease-in 1 0ms
+
+@keyframes FadeinScale
+	0%
+		opacity 0
+		transform scale(0, 0)
+	100%
+		opacity 1
+		transform scale(1, 1)
+*/
+/**
+ * @animation:  Large Size Fall
+ * @date        15.11.18
+ */
+.ad {
+  opacity: 0;
+}
+.ad.anim {
+  opacity: 1;
+  animation: Fall 200ms ease-out 1 0ms;
+}
+/**
+ * @animation:  Slide From Side
+ * @date        15.11.18
+ */
+/*
+### transform: translate(100px, 300px) でも可
+.ad
+	position relative
+	top 0
+	right -200px
+	opacity 0
+
+	&.anim
+		opacity 1
+		right 0
+		animation SlideFromSide 300ms ease-out 1 0ms
+
+@keyframes SlideFromSide
+	0%
+		right -200px
+		opacity 0
+	100%
+		right 0
+		opacity 1
+*/
+/**
+ * @animation:  Bounce
+ * @date        15.11.18
+ */
+/*
+.ad
+	position relative
+	top 0
+
+	&.anim
+		animation Bounce 4000ms ease-out 2 1000ms
+
+@keyframes Bounce
+	0%
+		top 0
+	5%
+		top 0
+	10%
+		top -20px
+	13%
+		top 0px
+	15%
+		top -15px
+	18%
+		top 0px
+	20%
+		top -10px
+	22%
+		top 0px
+	100%
+		top 0
+*/
+@-moz-keyframes Fall {
+  0% {
+    opacity: 0;
+    transform: scale(6, 6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes Fall {
+  0% {
+    opacity: 0;
+    transform: scale(6, 6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@-o-keyframes Fall {
+  0% {
+    opacity: 0;
+    transform: scale(6, 6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+@keyframes Fall {
+  0% {
+    opacity: 0;
+    transform: scale(6, 6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
