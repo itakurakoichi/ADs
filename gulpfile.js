@@ -24,6 +24,7 @@ var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 // check
 var htmlhint = require('gulp-htmlhint');
+var csslint = require('gulp-csslint');
 
 gulp.task('html', function() {
 	gulp.src('./src/**/*.jade')
@@ -39,6 +40,8 @@ gulp.task('css', function() {
 	gulp.src('./src/**/css/*.styl')
 		.pipe(plumber())
 		.pipe(stylus())
+		.pipe(csslint())
+		.pipe(csslint.reporter())
 		.pipe(gulp.dest('./src'))
 		.pipe(minifycss())
 		.pipe(gulp.dest('./dist'));
