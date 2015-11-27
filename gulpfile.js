@@ -16,16 +16,21 @@
 var gulp = require('gulp');
 var webserver = require('gulp-webserver');
 var plumber = require('gulp-plumber');
-
+// compile
 var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
+// compress
 var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+// check
+var htmlhint = require('gulp-htmlhint');
 
 gulp.task('html', function() {
 	gulp.src('./src/**/*.jade')
 		.pipe(plumber())
 		.pipe(jade({ pretty: true }))
+		.pipe(htmlhint())
+		.pipe(htmlhint.reporter())
 		.pipe(gulp.dest('./src/'))
 		.pipe(gulp.dest('./dist/'));
 });
