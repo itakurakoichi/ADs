@@ -1,16 +1,11 @@
 /**
  * @Comment
- * 2015.11.10
- *    画像最適化（gulp-imagemin）は不要だがinstallのみdone
  * 2015.11.11
- *    本番配布時にのみ、js, css, htmlの圧縮を行う、が相応しいか。（gulp dist 等のタスクに割り当てる）
- *    通常のdefault時（gulp）は圧縮以外を行う。
- *       当projectはmock作成用なので、そもそも圧縮は不要だが。
- * 2015.11.11
- *     src/__AD_PATTERN_NAME__/stylus/hoge.styl を
- *    dist/__AD_PATTERN_NAME__/css/hoge.css として配布したい。
- *       現状、css/hoge.styl として、css/hoge.css へ配布している。
- *          ディレクトリ構成に拘らなければ上記でも良いが。
+ *    TODO
+ *    src/__AD_PATTERN_NAME__/stylus/hoge.styl
+ *    dist/__AD_PATTERN_NAME__/css/hoge.css
+ *    へ配布
+ *       gulp-flatten https://www.npmjs.com/package/gulp-flatten 要対応
  */
 
 var gulp = require('gulp');
