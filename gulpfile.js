@@ -18,6 +18,7 @@ var stylus = require('gulp-stylus');
 var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 // check
+var jshint = require('gulp-jshint');
 var htmlhint = require('gulp-htmlhint');
 var csslint = require('gulp-csslint');
 
@@ -45,6 +46,9 @@ gulp.task('css', function() {
 gulp.task('js', function() {
 	gulp.src('./src/**/js/*.js')
 		.pipe(plumber())
+		.pipe(jshint('.jshintrc'))
+		.pipe(jshint.reporter('jshint-stylish'))
+		.pipe(jshint.reporter('fail'))
 		.pipe(uglify())
 		.pipe(gulp.dest('./dist/'));
 });
