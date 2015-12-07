@@ -36,8 +36,8 @@ gulp.task('css', function() {
 	gulp.src('./src/**/css/*.styl')
 		.pipe(plumber())
 		.pipe(stylus())
-		.pipe(csslint())
-		.pipe(csslint.reporter())
+		// .pipe(csslint())
+		// .pipe(csslint.reporter())
 		.pipe(gulp.dest('./src'))
 		.pipe(minifycss())
 		.pipe(gulp.dest('./dist'));
