@@ -1,4 +1,5 @@
 {
+	"strict": true,     // "use strict" を強制
 	"indent" : 2,        // インデント
 	"camelcase": true,   // キャメルケース
 	//"maxlen" : 80,     // 一行の最大文字数
