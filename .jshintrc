@@ -15,6 +15,6 @@
 	"globals": {
 		"$": false
 	},
-	"devel": true,       // console、alertを許可
 	//"debug": true,     // debuggerを許可
+	"devel": true        // console、alertを許可
 }
