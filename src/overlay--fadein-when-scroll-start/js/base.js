@@ -3,6 +3,8 @@
  *    - スクロール量が一定値を超えたら、ADをfadeIn表示する
 */
 $(function() {
+	'use strict';
+	
 	var $ad = $('.ad');
 	var SCROLL_OFFSET = 120;
 

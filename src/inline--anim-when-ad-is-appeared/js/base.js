@@ -4,6 +4,8 @@
  *         ADがwindow内に現れたらアニメーションで表示する, animationのclassをaddClassする
  */
 $(function() {
+	'use strict';
+	
 	var $ad = $('.ad');
 	var adApperedDisdance = $ad.offset().top - $(window).height() + $ad.height();
 	var adPassedDisdance = $ad.offset().top + $ad.height();
