@@ -1,12 +1,13 @@
 {
-	"indent" : 2,        // インデント
+	"strict": true,      // "use strict" を強制
+	"indent": 2,         // インデント
 	"camelcase": true,   // キャメルケース
-	//"maxlen" : 80,     // 一行の最大文字数
-	"unused" : true,     // 宣言のみで使用していない変数を検出
+	"unused": true,      // 宣言のみで使用していない変数を検出
+	//"maxlen": 80,      // 一行の最大文字数
 
 	// Relaxing Options - 危険性を認識した上で設定すること
-	"eqnull" : true,     // == null を許可
-	"expr" : true,        // x || (x = 1); とかができるようにする
+	"eqnull": true,      // == null を許可
+	"expr": true,        // x || (x = 1); とかができるようにする
 	"eqeqeq": true,      // ==、!=の使用禁止
 
 	// グローバル変数へのアクセスの管理
@@ -15,6 +16,6 @@
 	"globals": {
 		"$": false
 	},
-	//"debug": true,     // debuggerを許可
+	"debug": false,      // debuggerを許可
 	"devel": true        // console、alertを許可
 }

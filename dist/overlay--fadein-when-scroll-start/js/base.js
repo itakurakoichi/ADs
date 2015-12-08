@@ -1,1 +1,1 @@
-$(function(){var n,o=$(".ad"),d=120;$(window).scroll(function(){n=$(window).scrollTop(),n>d?o.fadeIn():o.fadeOut()})});
+$(function(){"use strict";var n,o=$(".ad"),c=120;$(window).scroll(function(){n=$(window).scrollTop(),n>c?o.fadeIn():o.fadeOut()})});

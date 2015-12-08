@@ -1,1 +1,1 @@
-$(function(){var o,i=$(".ad"),t=50,n=i.offset().top-t;$(window).scroll(function(){o=$(window).scrollTop(),o>=n?i.css({position:"fixed",top:t,left:0}):i.css({position:"relative",top:"inherit",left:"inherit"})})});
+$(function(){"use strict";var i,o=$(".ad"),t=50,s=o.offset().top-t;$(window).scroll(function(){i=$(window).scrollTop(),i>=s?o.css({position:"fixed",top:t,left:0}):o.css({position:"relative",top:"inherit",left:"inherit"})})});
