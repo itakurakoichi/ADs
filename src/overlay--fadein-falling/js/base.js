@@ -4,6 +4,8 @@
  *    - display AD, fadeIn and falling 一定値の上部から下降
 */
 $(function() {
+	'use strict';
+	
 	var $ad = $('.ad');
 	$ad.css({'opacity': 0});
 	var FALL_OFFSET = '60px';

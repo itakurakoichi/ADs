@@ -8,6 +8,8 @@
  *    - 媒体側のheaderのheightを、paramterで渡されること
  */
 $(function() {
+	'use strict';
+	
 	var $ad = $('.ad');
 	var HEADER_HEIGHT = 50;
 	var range = $ad.offset().top - HEADER_HEIGHT;
